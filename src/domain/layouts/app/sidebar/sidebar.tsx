@@ -15,7 +15,7 @@ export const Sidebar = () => {
   return (
     <div className="p-4">
       <div className="bg-gray-900 h-full w-20 rounded-lg p-4 flex flex-col">
-        <Link to={"/"}>
+        <Link to={"/profile"}>
           {!isErrorImage ? (
             <img
               src={user?.picture}
@@ -24,7 +24,7 @@ export const Sidebar = () => {
               onError={() => setIsErrorImage(true)}
             />
           ) : (
-            <div className="mx-auto size-12 flex items-center justify-center rounded-full border-4 border-primary-500 text-primary-500 text-center font-semibold text-xl bg-gray-800">
+            <div className="mx-auto size-12 flex items-center justify-center rounded-full border-4 border-primary-500 text-primary-500 text-center font-semibold text-xl bg-gray-800 hover:animate-pulse">
               {firstLetter}
             </div>
           )}
